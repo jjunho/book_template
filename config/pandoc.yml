@@ -1,0 +1,18 @@
+# =========================
+# Configuração base (comum)
+# =========================
+
+input-files:
+  - chapters/00-introducao.md
+  - chapters/01-capitulo1.md
+  - chapters/02-capitulo2.md
+
+metadata-file: config/metadata.yaml
+
+variables:
+  mainfont: "Noto Serif"
+  monofont: "Noto Sans Mono"
+  fontsize: 12pt
+  linestretch: 1.15
+  geometry: "margin=2cm"
+  lang: "pt-BR"

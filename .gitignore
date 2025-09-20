@@ -1,0 +1,17 @@
+# Artefatos gerados
+output/
+!output/.gitkeep
+*.pdf
+*.epub
+*.html
+
+# Arquivos temporários de editores
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Ambientes locais
+.venv/
+ENV/

@@ -1,0 +1,6 @@
+defaults:
+  - config/pandoc.yml
+
+to: epub
+output-file: output/__PROJECT_SLUG__.epub
+epub-metadata: config/metadata.yaml

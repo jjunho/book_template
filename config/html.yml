@@ -1,0 +1,7 @@
+defaults:
+  - config/pandoc.yml
+
+to: html5
+output-file: output/__PROJECT_SLUG__.html
+standalone: true
+css: config/templates/style.css

@@ -1,0 +1,5 @@
+# Cronologia
+
+| Evento | Data | Impacto |
+|--------|------|---------|
+|        |      |         |

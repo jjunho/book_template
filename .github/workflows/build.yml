@@ -1,0 +1,45 @@
+name: Build Book
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pre-commit
+        run: |
+          python -m pip install --upgrade pip
+          pip install pre-commit
+
+      - name: Run pre-commit checks
+        run: pre-commit run --all-files
+
+      - name: Install Pandoc and LaTeX engine
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-lang-portuguese
+
+      - name: Build all formats
+        run: make all
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: __PROJECT_SLUG__
+          path: |
+            output/__PROJECT_SLUG__.pdf
+            output/__PROJECT_SLUG__.epub
+            output/__PROJECT_SLUG__.html
+          if-no-files-found: error

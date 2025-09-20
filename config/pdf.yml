@@ -1,0 +1,6 @@
+defaults:
+  - config/pandoc.yml
+
+to: pdf
+output-file: output/__PROJECT_SLUG__.pdf
+pdf-engine: xelatex

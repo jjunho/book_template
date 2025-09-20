@@ -1,0 +1,5 @@
+__PROJECT_TITLE__
+Copyright (c) __PROJECT_YEAR__ __PROJECT_AUTHOR__
+Todos os direitos reservados.
+
+Este trabalho não pode ser copiado, distribuído ou modificado sem permissão expressa do detentor dos direitos.
